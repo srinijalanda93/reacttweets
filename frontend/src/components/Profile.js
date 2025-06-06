@@ -1,11 +1,14 @@
 import React from 'react';
+import ProfileHeader from '../Profilecomp/ProfileHeader';
+import ProfileDetails from '../Profilecomp/ProfileDetails';
+import ProfileTabs from '../Profilecomp/ProfileTabs';
 
 const Profile = () => {
   return (
-    <div className="p-3">
-      <h3 className="fw-bold">srinija</h3>
-      <p className="text-muted">@srinija</p>
-      <p>This is your profile section. Add tweets, info, and followers.</p>
+    <div className="w-full max-w-3xl mx-auto text-black min-h-screen">
+      <ProfileHeader />
+      <ProfileDetails />
+      <ProfileTabs />
     </div>
   );
 };
