@@ -1,0 +1,32 @@
+.home-container {
+  font-family: poppins;
+  display: grid;
+  grid-template-columns: 2fr 6fr 2fr;
+  height: 100vh;
+  /* padding: 10px; */
+  /* gap: 10px; */
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.leftsidecontainer-size {
+  font-size: 20px;
+  padding-block: 10px;
+  box-sizing: border-box !important;
+}
+
+/* .left-column {
+  background-color: #f0f2f5; 
+} */
+
+.main-column {
+  /* background-color: #E5E5E5; */
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+/* 
+.right-column {
+  background-color: #f0f2f5;
+} */
