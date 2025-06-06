@@ -2,22 +2,35 @@ import React from 'react';
 import LeftSidebar from '../components/LeftSidebar';
 import MainFeed from '../components/MainFeed';
 import RightSidebar from '../components/RightSidebar';
+import Profile from '../components/Profile';
+import { useState } from 'react';
+
 import './Home.css';
 
 const Home = () => {
+  const [activeTab, setActiveTab] = useState('Home');
+
+  const renderMainContent = () => {
+    switch (activeTab) {
+      case 'Profile':
+        return <Profile />;
+      case 'Home':
+      default:
+        return <MainFeed />;
+    }
+  };
+
   return (
-    <div className="home-container">
-      <div className="left-column">
-        <LeftSidebar />
+    <div className="d-flex justify-content-between">
+      <LeftSidebar onMenuClick={setActiveTab} />
+      <div style={{ flex: 1, maxWidth: '600px' }}>
+        {renderMainContent()}
       </div>
-      <div className="main-column">
-        <MainFeed />
-      </div>
-      <div className="right-column">
-        <RightSidebar />
-      </div>
+      <RightSidebar />
     </div>
   );
 };
 
 export default Home;
+
+//export default Home;
